@@ -1,0 +1,15 @@
+[].js
+treats like dynamic segment 
+
+import { useRouter } from 'next/router' use to get the values from the path in browser -> 
+const router = useRouter() ->
+const {productID, reviewID} = router.query; ->
+then now I can render the values of this variables in my jsx or tsx -> 
+
+import {useRouter} from 'next/router'
+function Home () {
+    const router = useRouter()
+    const {productID, reviewID} = router.query; // by using this way I'm able to distract the values that router carry.
+
+    return <h2> product review for {productID} is the following -> {reviewID} </h2>
+}
